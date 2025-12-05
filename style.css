@@ -1,0 +1,361 @@
+/* DEVELOPER Jean Andrei Malinao, IS117-007, Fall 2025 */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+
+    color: #222;
+    background: linear-gradient(
+        to bottom,
+        #dcfff4 0%,
+        #98ffee 50%,
+        #53ceff 100%
+    );
+}
+
+/* Nav */
+.navbar-custom {
+    width: 100%;
+    padding: 20px 40px;
+    border-bottom: 1px solid #bbb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /*
+    background: linear-gradient(
+        to right,
+        #ffffff 0%,
+        #e4e4e4 50%,
+        #b3b3b3 100%
+    );
+    */
+    background-color:white; 
+    z-index: 9999;
+}
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Navbar Links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+}
+.hero-box {
+    width: 70%;
+    height: 360px;
+    margin: auto;
+    border: 2px solid #aaa;
+    background: #eee;
+}
+.dots {
+    margin-top: 2vw;
+}
+.dots span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #444;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.hero h1 {
+    margin-top: 25px;
+    font-size: 32px;
+}
+
+.logo{
+    width: 50%;
+    height: 50%;
+}
+
+.logo-about{
+    width: 50%;
+    height: 50%;
+    margin: -12%;
+}
+
+/* NOTE: REMOVE THIS SOON 
+.lines div {
+    width: 80%;
+    height: 8px;
+    background: #555;
+    margin: 8px auto;
+}
+*/
+
+#myCarousel {
+    width: 90%;
+    min-width: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5%;
+    overflow: hidden;
+}
+
+#myCarousel .carousel-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    
+}
+
+body .summary{
+    margin-left: 5%;
+    margin-right: 5%;
+
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+h1{
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+
+
+    padding: 2%;
+    border-bottom-style:solid;
+    border-bottom-width: 3px;
+    border-image: linear-gradient(to right, #0021b3, #00014d) 1;
+    
+}
+
+/* Cards */
+.card {
+    border-radius: 20px;
+}
+.card img {
+    border-radius: 20px 20px 0 0;
+}
+
+
+/* Information Blocks for Interior Page */
+.information-main{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 2%;
+    
+}
+
+.information-main.reverse{
+    flex-direction: row-reverse;
+}
+
+.information-image{
+    width: 30%;
+    height: 30%;
+    min-width: 20%;
+    min-height: 20%;
+    object-fit: cover;
+    border-radius: 30px;
+    padding: 1%;
+    margin-left: 12%;
+    margin-right: 0%;
+}
+
+.information-image.reverse{
+    margin-right: 12%;
+    margin-left: 0;
+
+
+}
+
+.information-content{
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+}
+
+/* Contact Stuff */
+.contact-image{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Footer */
+footer {
+    margin-top: 80px;
+    border-top: 1px solid #ccc;
+    padding: 30px 40px;
+    font-size: 14px;
+
+    background: linear-gradient(
+        to bottom,
+
+        #8688ff 0%,
+        #a29bff 100%
+    );
+
+}
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.footer-links a {
+    margin: 0 10px;
+    color: #555;
+    text-decoration: none;
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-legal a {
+    color: #666;
+    text-decoration: none;
+}
+.footer-legal span {
+    margin: 0 5px;
+}
+
+.boot-card {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Mobile */
+@media (max-width: 992px)
+{
+    .contact-image{
+        width: 110%;
+        height: 110%;
+        object-fit:cover;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 978px) {
+    .information-content{
+        width: 70%;
+    }
+    .information-image{
+        width: 70%;
+        height: 70%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .information-image.reverse{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        background: white;
+        padding: 20px 0;
+        border-bottom: 1px solid #ccc;
+        gap: 20px;
+        text-align: center;
+    }
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .logo{
+        width: 80%;
+        height: 80%;    
+    }
+    /* Mobile Adjustments */
+    @media (max-width: 576px) {
+        #myCarousel {
+            width: 100%;
+        }
+        #myCarousel .carousel-item img {
+            height: 220px;
+        }
+        .carousel-indicators {
+            bottom: -20px;
+        }
+
+    }
+
+    .information-main{
+        flex-direction: column;
+    }
+
+    .information-main.reverse{
+        flex-direction: column;
+    }
+
+    .information-content{
+        text-align: center;
+        width: 80%
+    }
+
+    .information-image{
+        width: 70%;
+        height: 70%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .information-image.reverse{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}

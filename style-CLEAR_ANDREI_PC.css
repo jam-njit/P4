@@ -1,0 +1,191 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: rgb(255, 238, 162);
+}
+
+/* NAVBAR */
+.navbar-custom {
+    width: 100%;
+    padding: 20px 40px;
+    border-bottom: 1px solid #bbb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: #ffffff;
+}
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 40px 0;
+}
+.hero-box {
+    width: 70%;
+    height: 360px;
+    margin: auto;
+    border: 2px solid #aaa;
+    background: #eee;
+}
+.dots {
+    margin-top: 2vw;
+}
+.dots span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #444;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.hero h1 {
+    margin-top: 25px;
+    font-size: 32px;
+}
+
+/* NOTE: REMOVE THIS SOON 
+.lines div {
+    width: 80%;
+    height: 8px;
+    background: #555;
+    margin: 8px auto;
+}
+*/
+
+#myCarousel {
+    width: 90%;              /* takes 90% of screen width */
+    min-width: 100px;
+    max-width: 1200px;       /* never gets bigger than 1200px */
+    margin: 0 auto;          /* centers it horizontally */
+    overflow: hidden;
+    border-radius: 10px;     /* optional, looks cleaner */
+}
+
+#myCarousel .carousel-item img {
+    width: 100%;
+    height: 350px;           /* base height */
+    object-fit: contain;       /* crops nicely */
+}
+
+
+body .summary{
+    width: 80%;
+    margin: 50px auto;
+    margin-bottom: .5vw;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 80px;
+    border-top: 1px solid #ccc;
+    padding: 30px 40px;
+    font-size: 14px;
+}
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.footer-links a {
+    margin: 0 10px;
+    color: #555;
+    text-decoration: none;
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-legal a {
+    color: #666;
+    text-decoration: none;
+}
+.footer-legal span {
+    margin: 0 5px;
+}
+
+.boot-card {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        background: white;
+        padding: 20px 0;
+        border-bottom: 1px solid #ccc;
+        gap: 20px;
+        text-align: center;
+    }
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    /* Tablet Adjustments */
+    @media (max-width: 992px) {
+        #myCarousel .carousel-item img {
+            height: 300px;
+        }
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 576px) {
+        #myCarousel {
+            width: 100%;
+        }
+        #myCarousel .carousel-item img {
+            height: 220px;
+        }
+    }
+}
